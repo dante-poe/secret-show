@@ -8,7 +8,7 @@ var closeBtn = document.querySelector('.modal-close');
 $('#rock').click(function () {
     console.log(modal);
     modal.classList.add('is-active');
-    $('#modalGenre').text('Spirit Machines');
+    $('#modalGenre').text('Spirit Machine');
     var url = 'assets/images/spirit-machine-rock.JPG'
     $('.modalcontent').ready(function () {
         var image = new Image();
@@ -21,7 +21,7 @@ $('#rock').click(function () {
 $('#folk').click(function () {
     modal.classList.add('is-active');
     $('#modalGenre').text('Pixie and the Partygrass Boys');
-    var url = 'assets/images/pixie%thepartygrassboys-folk.JPG'
+    var url = 'assets/images/pixiethepartygrassboys-folk.JPG'
     $('.modalcontent').ready(function () {
         var image = new Image();
         image.src = url;
@@ -156,6 +156,7 @@ $('#folk').click(function clearDOM() {
         })
         // --------------update the Dom with Youtube after modal button 
         pullYoutube('mzRGq143Xws');
+        pullMapbox();
     })
 });
 
@@ -178,6 +179,7 @@ $('#indie').click(function clearDOM() {
         })
         // --------------update the Dom with Youtube after modal button 
         pullYoutube('WYdXnmDlcd0');
+        pullMapbox();
     })
 });
 //-------------Dance Button
@@ -197,6 +199,7 @@ $('#dance').click(function clearDOM() {
         })
         // --------------update the Dom with Youtube after modal button 
         pullYoutube('7voMjZhK9BM');
+        pullMapbox();
     })
 });
 
@@ -386,11 +389,7 @@ function pullMapbox() {
             listing.classList.add('active');
         }
     });
-<<<<<<< HEAD
-  }
-};
-=======
->>>>>>> ae625fc0e6032e045863b2e8786aed7302fa12c2
+
 
     function buildLocationList(data) {
         data.features.forEach(function (venues, i) {
@@ -702,6 +701,7 @@ function createPopUp(currentFeature) {
     if (popUps[0]) popUps[0].remove();
     var popup = new mapboxgl.Popup({ closeOnClick: false })
 <<<<<<< HEAD
+<<<<<<< HEAD
     .setLngLat(currentFeature.geometry.coordinates)
     .setHTML(
     '<h3>Sweetgreen</h3>' +
@@ -713,6 +713,8 @@ function createPopUp(currentFeature) {
     }
 };
 =======
+=======
+>>>>>>> main
         .setLngLat(currentFeature.geometry.coordinates)
         .setHTML(
             '<h3>Sweetgreen</h3>' +
@@ -722,4 +724,7 @@ function createPopUp(currentFeature) {
         )
         .addTo(map);
     };
+<<<<<<< HEAD
 >>>>>>> ae625fc0e6032e045863b2e8786aed7302fa12c2
+=======
+>>>>>>> main
